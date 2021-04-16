@@ -1,4 +1,64 @@
-label_marin_algovore: 
+label Malini_bouges_toi_de_réparer_tes_bétises: 
+#image de la planète
+
+    n "Nous voici de retour sur notre bonne vieille Hermiteon-1 après quelques millions d’années depuis la fameuse éruption volcanique !"
+
+#(Image identique à celle utilisée précédemment sauf que l’eau est verte truc)
+
+    n "Des cendres continuent à retomber en masse sur l’eau malgré les millions d’années qui viennent de s’écouler."
+
+    n "Ainsi, de nombreuses espèces se sont adaptées au cours du temps à cette colorisation intense, notamment les aqua-rius."
+
+    n "Ces derniers ont donc vu de nombreuses populations se séparées et données de nouvelles espèces."
+
+    n "Parmi ces espèces on retrouve les aqua-jadus. Au cours du temps différentes sélections leur permettant de vivre de manière plus adaptée ce sont produites."
+
+    n "Toutefois, ils demeurent incapables de digérer les cendres volcaniques de cuivre dans l’eau,"
+
+    n ", ceux-ci vont aller manger les algues afin de vomir (ou aider à digérer) l’excédent de cendre dans leur organisme."
+
+    n "Cependant, certains arrivent à mieux digérer les cendres sans forcément consommer d’algue,"
+
+    n "ceci étant notamment dû à des bactéries mutantes se retrouvant chez certaines populations d’aqua jadus."
+
+#(Montrer un aqua-jadus qui vomit)
+
+    n "Au fur et à mesure des générations à force d’intégrer des algues à leur alimentation classique ils vont finir par intégrer les nutriments des algues à leur organisme"
+
+    n "en partie grâce un autre nouveau type de bactéries présentes dans leur tube digestif."
+
+    n "Ils vont finir par devenir alguivore !"
+
+    n "tandis que les individus qui n’étaient pas affectés par les cendres vont garder leurs instincts de prédation continuer à se nourrir d’autres petits animaux."
+
+    n "Le concept évolutif en action dans ce cas est une spéciation sympatrique,"
+
+    n "les individus qui pratiquent à temps plein la chasse sont plus vifs et moins chétif que les autres et auront tendance à se reproduire entre eux,"
+    
+    n "pour conserver leur caractère qui permet digérer les cendres."
+
+    n "Alors que les moins réactifs qui sont toujours enroulés autour de leurs algues favorites vont se reproduire entre eux caché et à l’abris du danger."
+
+    menu:
+        n "Qui voulez-vous suivre ? Les individus vifs et bon chasseur ou les nouveaux alguivores tout nouvellement adapté à leur environnement ?"
+        "les carnivores":
+            jump invertebre_marin_carnivore
+        "les algovores":
+
+            n "Tu as donc décidé de suivre la population mangeur d’algue."
+
+    n "Par chance les prédateurs ont horreur de se balader dans les amas d’algues ça leur donne un net avantage et une protection contre ceux-ci."
+
+    n "Pour en arriver là il a fallu du temps, de plus ce résultat est le fruit d’une sélection sexuelle parfaitement exécutée"
+
+    n "Dans la nature il existe plusieurs critères de sélection,"
+
+    n "dans ce mécanisme les individus répondant le plus aux critères exigés auront tendance à plus transmettre leurs gènes aux générations suivante et ainsi de suite,"
+
+    n "jusqu’à ce que le caractère sélectionné soit si amplifié qu’on ne retrouvera plus que lui (ou du moins il sera très dominant) parmi notre population jusqu’à ce que les critères changent à nouveaux."
+
+#début invertebre marin algovore
+
 #Image d’eau trouble (étang vert) avec des cailloux au fond si possible
 #Image de l’espèce partout sur terre  
 
@@ -39,7 +99,7 @@ label_marin_algovore:
     menu:
         n "Quels types d’individus voulez-vous suivre ?"
         "12 bras":
-        jump Douze_bras
+            jump Douze_bras
         "8 bras":
 
             n "Le fait d’avoir 8 bras est un avantage évolutif."
@@ -99,8 +159,8 @@ label_marin_algovore:
     menu:
         n "Qui voulez-vous suivre entre les colorés et les incolores ?"
         "colorés":
-        jump algue_colorés 
-        "incolores"
+            jump algue_colorés
+        "incolores":
 
          n "Malheureusement vous ne continuerez pas l’aventure avec les scintillus-asichinus incolore,"
         
@@ -111,9 +171,10 @@ label_marin_algovore:
     n "sans le vouloir la mère évolution n’est pas toujours tendre avec ses enfants et certaines populations sont incapable de pouvoir concurrencer les mieux adapté et sont donc condamnés à disparaitre."
 
 # retour texte final
- return 
+    jump TF
+    return 
 
- label algue_colorés
+label algue_colorés:
 
     n "Vous décidez de continuer votre aventure avec les scintillus-asichinus colorés."
 
@@ -121,9 +182,11 @@ label_marin_algovore:
     
     n "afin de toujours montrer qu’ils sont le meilleur parti possible pour leur partenaire et ainsi transmettre leurs caractères aux générations suivantes."
 
-return 
+#retour texte final
+    jump TF 
+    return 
 
-label Douze_bras
+label Douze_bras:
 
     n "Notre population de pluripodus-asichinus à 12 membres ont une certaine stabilité dans leur mode de vie dans leur zone pélagique."
 
@@ -169,15 +232,15 @@ label Douze_bras
 
     n "Cette coquille permet à l’espèce de conserver une excellente mobilité et une rapidité raisonnable pour s’enfuir lors d’une attaque."
 
-    n "De plus cette petite coquille n’étant pas trop encombrante elle représente un avantage dans la sélection sexuelle appliqué lors d’une danse nuptiale pour attirer leur partenaire,
+    n "De plus cette petite coquille n’étant pas trop encombrante elle représente un avantage dans la sélection sexuelle appliqué lors d’une danse nuptiale pour attirer leur partenaire,"
     
     n "contrairement aux grosses coquilles qui n’ont plus assez d’adresse."
 
-#texte final 
+#texte final
+    jump TF
+    return 
 
-return 
-
-label grosse_coquille
+label grosse_coquille:
 
     n "Vous avez décidé de continuer votre aventure avec les dodécae-coquillus avec la grosse coquille,"
     
@@ -186,5 +249,46 @@ label grosse_coquille
     n "Mais ceux-ci doivent passer leur temps à se nourrir pour subvenir à leurs besoins mais également aux besoins de leur symbiote pour éviter qu’il ne devienne un parasite."
 
 # texte final
+label TF:
 
-return 
+    m "Nous voici arriver au bout de notre aventure, ne disposant pas assez de données concernant l’évolution de cette lignée nous devons donc nous arrêter car il est impossible de prédire à long terme ce vers quoi l’évolution mènera nos chers amis les habitants de la planète Hermiteon-1."
+
+    m "DONC, l’évolution continue !"
+
+    m "Ce n’est pas parce qu’on ne la voit pas en une vie qu’elle n’a pas lieu."
+
+    m "Il faut prendre en compte que le temps d’évolution d’une espèce se compte en génération !"
+
+    m "De plus, nous tenions à préciser que ce processus n’est pas si simple."
+
+    m "Chaque choix que vous avez dû faire vous a mené à 2 espèces alors qu’en réalité il y a beaucoup plus de bifurcations."
+
+    m "C’est 2 espèces sont celles sur lesquelles nous avions le plus d’informations et qui pour nous étaient celles dont leur lignée permettait de bien comprendre les étapes clés de l’évolution."
+
+    m "Pour vous montrer à quel point les bifurcations sont importantes, voici où se trouve votre espèce sur le buisson de la vie."
+
+#(Apparition du buisson de la vie avec une flèche dessus qui montre où se trouve l’espèce)
+
+    m "Cette conception n’est pas très récente ! Elle n’existe que depuis un peu plus de 150 ans."
+
+    m "Cette théorie a été donnée par CHARLES DARWIN et depuis des scientifiques ont apporté beaucoup de modifications."
+
+    m "Bien sûr, au cours de notre jeu nous n’avons parcouru qu’une fraction de la vie sur cette planète,"
+    
+    m "il y a aussi les microorganismes, les plantes, les champignons et toutes les autres formes de vie qui elles aussi après ces milliards d’années ont-elles aussi données naissance à une grande variété d’espèces."
+
+    m "Enfin le dernier point à retenir est que l’évolution sur cette planète sera complètement différente sur une autre planète où la vie est possible mais les mécanismes que nous avons abordé durant ce jeu seront identiques."
+
+    m "Bien, nous voici à la fin… Je te propose deux choses :"
+
+#(apparition du QR code associé à la bestiole finale)
+
+    m "Si tu souhaites garder un souvenir du jeu avec une ta dernière bestiole va au FAB LAB et demande à ce qu’on te l’imprime en 3D grâce à ce QR code"
+
+    m "ET je te propose de recommencer le jeu pour voir ce à quoi les autres espèces vivant sur la planète peuvent bien ressembler ;)"
+    
+    m "A bientôt !"
+
+#FIN DU JEU
+
+    return
